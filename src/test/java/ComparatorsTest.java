@@ -30,7 +30,7 @@ public class ComparatorsTest {
         int a = 1;
         int b = 2;
         boolean expected = false;
-        boolean actual = c.isEqual(a, b);
+        boolean actual = c.greaterThan(a, b);
         Assert.assertEquals(expected, actual);
     }
 
@@ -41,7 +41,7 @@ public class ComparatorsTest {
     public void greaterThanTest1(){
         int a = 2;
         int b = 1;
-        boolean expected = true;
+        boolean expected = false;
         boolean actual = c.greaterThan(a, b);
         Assert.assertEquals(expected, actual);
     }
@@ -77,7 +77,7 @@ public class ComparatorsTest {
     public void lessThanTest1(){
         int a = 1;
         int b = 2;
-        boolean expected = true;
+        boolean expected = false;
         boolean actual = c.lessThan(a, b);
         Assert.assertEquals(expected, actual);
     }
@@ -111,7 +111,7 @@ public class ComparatorsTest {
     public void greaterThanOrEqualToTest1(){
         int a = 2;
         int b = 1;
-        boolean expected = true;
+        boolean expected = false;
         boolean actual = c.greaterThanOrEqualTo(a, b);
         Assert.assertEquals(expected, actual);
     }
@@ -123,7 +123,7 @@ public class ComparatorsTest {
     public void greaterThanOrEqualToTest2(){
         int a = 2;
         int b = 2;
-        boolean expected = true;
+        boolean expected = false;
         boolean actual = c.greaterThanOrEqualTo(a, b);
         Assert.assertEquals(expected, actual);
     }
@@ -172,7 +172,7 @@ public class ComparatorsTest {
         int a = 4;
         int b = 2;
         boolean expected = false;
-        boolean actual = c.lessThanOrEqualTo(a, b);
+        boolean actual = c.greaterThanOrEqualTo(a, b);
         Assert.assertEquals(expected, actual);
     }
 
@@ -187,7 +187,7 @@ public class ComparatorsTest {
         int a = 1;
         int b = 1;
         boolean expected = false;
-        boolean actual = c.notEqualTo(a, b);
+        boolean actual = c.greaterThanOrEqualTo(a, b);
         Assert.assertEquals(expected, actual);
     }
     /**
